@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Realistic Virtual Piano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Realistic Virtual Piano</h1>
+
+  <div class="controls">
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+    <button id="recordBtn">🔴 Record</button>
+    <button id="stopBtn" disabled>⏹ Stop</button>
+    <button id="playBtn" disabled>▶️ Play</button>
+    <button id="downloadBtn" disabled>⬇️ Download</button>
+  </div>
+
+  <div class="floating-notes">
+    <div class="note" style="left: 10%;">♪</div>
+    <div class="note" style="left: 30%; animation-delay: 2s;">♩</div>
+    <div class="note" style="left: 50%; animation-delay: 4s;">♫</div>
+    <div class="note" style="left: 70%; animation-delay: 6s;">♬</div>
+    <div class="note" style="left: 90%; animation-delay: 8s;">🎵</div>
+  </div>
+
+  <div class="piano-container">
+    <div class="piano" id="piano">
+<audio id="A0" src="sounds/0-a.wav"></audio>
+<audio id="A#0" src="sounds/0-as.wav"></audio>
+<audio id="B0" src="sounds/0-b.wav"></audio>
+<audio id="C1" src="sounds/1-c.wav"></audio>
+<audio id="C#1" src="sounds/1-cs.wav"></audio>
+<audio id="D1" src="sounds/1-d.wav"></audio>
+<audio id="D#1" src="sounds/1-ds.wav"></audio>
+<audio id="E1" src="sounds/1-e.wav"></audio>
+<audio id="F1" src="sounds/1-f.wav"></audio>
+<audio id="F#1" src="sounds/1-fs.wav"></audio>
+<audio id="G1" src="sounds/1-g.wav"></audio>
+<audio id="G#1" src="sounds/1-gs.wav"></audio>
+<audio id="A1" src="sounds/1-a.wav"></audio>
+<audio id="A#1" src="sounds/1-as.wav"></audio>
+<audio id="B1" src="sounds/1-b.wav"></audio>
+<audio id="C2" src="sounds/2-c.wav"></audio>
+<audio id="C#2" src="sounds/2-cs.wav"></audio>
+<audio id="D2" src="sounds/2-d.wav"></audio>
+<audio id="D#2" src="sounds/2-ds.wav"></audio>
+<audio id="E2" src="sounds/2-e.wav"></audio>
+<audio id="F2" src="sounds/2-f.wav"></audio>
+<audio id="F#2" src="sounds/2-fs.wav"></audio>
+<audio id="G2" src="sounds/2-g.wav"></audio>
+<audio id="G#2" src="sounds/2-gs.wav"></audio>
+<audio id="A2" src="sounds/2-a.wav"></audio>
+<audio id="A#2" src="sounds/2-as.wav"></audio>
+<audio id="B2" src="sounds/2-b.wav"></audio>
+<audio id="C3" src="sounds/3-c.wav"></audio>
+<audio id="C#3" src="sounds/3-cs.wav"></audio>
+<audio id="D3" src="sounds/3-d.wav"></audio>
+<audio id="D#3" src="sounds/3-ds.wav"></audio>
+<audio id="E3" src="sounds/3-e.wav"></audio>
+<audio id="F3" src="sounds/3-f.wav"></audio>
+<audio id="F#3" src="sounds/3-fs.wav"></audio>
+<audio id="G3" src="sounds/3-g.wav"></audio>
+<audio id="G#3" src="sounds/3-gs.wav"></audio>
+<audio id="A3" src="sounds/3-a.wav"></audio>
+<audio id="A#3" src="sounds/3-as.wav"></audio>
+<audio id="B3" src="sounds/3-b.wav"></audio>
+<audio id="C4" src="sounds/4-c.wav"></audio>
+<audio id="C#4" src="sounds/4-cs.wav"></audio>
+<audio id="D4" src="sounds/4-d.wav"></audio>
+<audio id="D#4" src="sounds/4-ds.wav"></audio>
+<audio id="E4" src="sounds/4-e.wav"></audio>
+<audio id="F4" src="sounds/4-f.wav"></audio>
+<audio id="F#4" src="sounds/4-fs.wav"></audio>
+<audio id="G4" src="sounds/4-g.wav"></audio>
+<audio id="G#4" src="sounds/4-gs.wav"></audio>
+<audio id="A4" src="sounds/4-a.wav"></audio>
+<audio id="A#4" src="sounds/4-as.wav"></audio>
+<audio id="B4" src="sounds/4-b.wav"></audio>
+<audio id="C5" src="sounds/5-c.wav"></audio>
+<audio id="C#5" src="sounds/5-cs.wav"></audio>
+<audio id="D5" src="sounds/5-d.wav"></audio>
+<audio id="D#5" src="sounds/5-ds.wav"></audio>
+<audio id="E5" src="sounds/5-e.wav"></audio>
+<audio id="F5" src="sounds/5-f.wav"></audio>
+<audio id="F#5" src="sounds/5-fs.wav"></audio>
+<audio id="G5" src="sounds/5-g.wav"></audio>
+<audio id="G#5" src="sounds/5-gs.wav"></audio>
+<audio id="A5" src="sounds/5-a.wav"></audio>
+<audio id="A#5" src="sounds/5-as.wav"></audio>
+<audio id="B5" src="sounds/5-b.wav"></audio>
+<audio id="C6" src="sounds/6-c.wav"></audio>
+<audio id="C#6" src="sounds/6-cs.wav"></audio>
+<audio id="D6" src="sounds/5-d.wav"></audio>
+<audio id="D#6" src="sounds/6-ds.wav"></audio>
+<audio id="E6" src="sounds/6-a.wav"></audio>
+<audio id="F6" src="sounds/6-f.wav"></audio>
+<audio id="F#6" src="sounds/6-fs.wav"></audio>
+<audio id="G6" src="sounds/6-g.wav"></audio>
+<audio id="G#6" src="sounds/6-gs.wav"></audio>
+<audio id="A6" src="sounds/6-a.wav"></audio>
+<audio id="A#6" src="sounds/6-as.wav"></audio>
+<audio id="B6" src="sounds/6-b.wav"></audio>
+<audio id="C7" src="sounds/7-c.wav"></audio>
+<audio id="C#7" src="sounds/7-cs.wav"></audio>
+<audio id="D7" src="sounds/7-d.wav"></audio>
+<audio id="D#7" src="sounds/7-ds.wav"></audio>
+<audio id="E7" src="sounds/7-e.wav"></audio>
+<audio id="F7" src="sounds/7-f.wav"></audio>
+<audio id="F#7" src="sounds/7-fs.wav"></audio>
+<audio id="G7" src="sounds/7-g.wav"></audio>
+<audio id="G#7" src="sounds/7-gs.wav"></audio>
+<audio id="A7" src="sounds/7-a.wav"></audio>
+<audio id="A#7" src="sounds/7-as.wav"></audio>
+<audio id="B7" src="sounds/7-b.wav"></audio>
+<audio id="C8" src="sounds/8-c.wav"></audio>
+    </div>
+  </div>
+
+  <script src="piano.js"></script>
+</body>
+</html>
